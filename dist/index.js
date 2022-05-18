@@ -44,7 +44,7 @@ function add(a, b) {
 function log(message) {
     console.log(message);
 }
-console.log(add(1, 8));
+//console.log(add(1,8))
 log('wafula');
 const users = {
     id: 1,
@@ -54,7 +54,6 @@ const p1 = 20;
 const p2 = 'wafula';
 const Add = (a, b) => a + b;
 const subtract = (a, b) => a - b;
-console.log(subtract(90, 5));
 class Person {
     constructor(name, id) {
         this.name = name;
@@ -75,5 +74,14 @@ class Employee extends Person {
 }
 const brad = new Person("Wafula", 1);
 const emp = new Employee("Wafula", 1, "IT");
-emp.register();
-brad.register();
+//emp.register()
+//brad.register()
+//Generics
+function getArray(item) {
+    return new Array().concat(item);
+}
+let numArray = getArray([1, 6, 9, 7]);
+let stArray = getArray(['wafula', "allan", "isaac"]);
+numArray.push(90);
+numArray.pop();
+console.log(numArray);

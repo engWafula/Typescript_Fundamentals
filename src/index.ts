@@ -69,7 +69,7 @@ let customerId=<number>cid
  function log(message:string | number):void{
     console.log(message)
  }
-console.log(add(1,8))
+//console.log(add(1,8))
 log('wafula')
 
 //Interfaces
@@ -101,7 +101,7 @@ interface mapFunc{
 const Add:mapFunc=(a:number,b:number):number=>a+b
 const subtract:mapFunc=(a:number,b:number):number=>a-b
 
-console.log(subtract(90,5))
+//console.log(subtract(90,5))
 
 //Classes
 interface personInterface{
@@ -136,5 +136,20 @@ class Employee  extends Person{
 
 const brad = new Person("Wafula",1);
 const emp =new Employee("Wafula",1,"IT")
-emp.register()
-brad.register()
+//emp.register()
+//brad.register()
+
+
+//Generics
+
+function getArray<T>(item:T[]):T[]{
+ return new Array().concat(item)
+}
+
+let numArray =getArray<number>([1,6,9,7])
+let stArray=getArray<string>(['wafula',"allan","isaac"])
+
+numArray.push(90)
+numArray.pop()
+
+console.log(numArray)
